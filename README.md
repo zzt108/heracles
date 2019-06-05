@@ -19,7 +19,7 @@ This needs to be a "fully working application" (you choose the format: web, cli,
 
 *eg: A simplesimple HTML page with an input box*
 
-### Our evaluation criteria:
+## Our evaluation criteria:
 
 - How did your structure your code? (*eg: is it structured in a testable way?*)
 - What did you test?
@@ -27,13 +27,13 @@ This needs to be a "fully working application" (you choose the format: web, cli,
 - How did you test the functionality? and the user interface?
 - We also care a little about the functionality itself
 
-### What we won't really care: 
+## What we won't really care: 
 
 - If your UI looking great, 0 line of CSS is quite enough CSS
 - You use the latest JS framework of the day
 - The programming language
 
-### What would be awesome:
+## What would be awesome:
 
 - You use some nice testing techniques, fuzz testing, mutation testing, ... (even if they don't make sense here they'll probably do in your day to day job)
 - You handle some stuff to test that we are not even aware of 
