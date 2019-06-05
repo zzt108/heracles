@@ -25,7 +25,7 @@ This needs to be a "fully working application" and you can choose the format:
 
 eg: A simplesimple HTML page with an input box
 
-## What will be our evaluation criteria?
+### Our evaluation criteria:
 
 - How did your structure your code? (eg: is it structured in a testable way?)
 - What did you test?
@@ -35,13 +35,13 @@ eg: A simplesimple HTML page with an input box
   - The user interface
 - We also care a little about the functionality itself
 
-## What we won't really care: 
+### What we won't really care: 
 
 - If your UI looking great, 0 line of CSS is quite enough CSS
 - You use the latest JS framework of the day
 - The programming language
 
-## What would be awesome:
+### What would be awesome:
 
 - You use some nice testing techniques, fuzz testing, mutation testing, ... (even if they don't make sense here they'll probably do in your day to day job)
 - You handle some stuff to test that we are not even aware of 
@@ -54,4 +54,4 @@ Fork this repo with your solution. We want to see your progression through commi
 
 Please let us know how long the challenge takes you. We're not looking for how speedy or lengthy you are. It's just really to give us a clearer idea of what you've produced in the time you decided to take. Feel free to go as big or as small as you want.
 
-Happy testing!
+Happy testing! 🚀
