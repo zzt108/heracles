@@ -17,7 +17,7 @@ formatMoney(1600); // '1 600.00'
 
 This needs to be a "fully working application" (you choose the format: web, cli, backend-frontend, mobile app, ...)
 
-*eg: A simplesimple HTML page with an input box*
+*eg: A simple HTML page with an input box*
 
 ## Our evaluation criteria:
 
