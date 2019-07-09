@@ -22,9 +22,8 @@ This needs to be a "fully working application" (you choose the format: web, cli,
 ## Our evaluation criteria:
 
 - How did your structure your code? (*eg: is it structured in a testable way?*)
-- What did you test?
+- What did you test? (*functionality, performance, ...*) at which level? (*unit, integration, UI, ...*)
 - Which testing technique did you use? why?
-- How did you test the functionality? and the user interface?
 - We also care a little about the functionality itself
 
 ## What we won't really care: 
