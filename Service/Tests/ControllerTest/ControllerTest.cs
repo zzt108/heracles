@@ -16,5 +16,22 @@ namespace TestModel
             Format.Money(actual).Should().Be(expected);
             
         }
+        [TestCase]
+        public void CanRound()
+        {
+            var actual = "2310000.159897";
+            var expected = "2 310 000.16";
+            Format.Money(actual).Should().Be(expected);
+            
+        }
+
+        [TestCase]
+        public void CanFormatBillions()
+        {
+            var actual = "5432310000.15123";
+            var expected = "5 432 310 000.15";
+            Format.Money(actual).Should().Be(expected);
+            
+        }
     }
 }
