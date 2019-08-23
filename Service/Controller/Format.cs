@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Controller
 {
-    public class Format
+    public static class Format
     {
-        public string Money(string input, int rounding = 2)
+        public static string Money(string input, int rounding = 2)
         {
             try
             {
                 if (decimal.TryParse(input, out var number))
                 {
                     var rounded = Math.Round(number, rounding);
-                    return string.Format("# ##0.00", number);
+                    return number.ToString("# ##0.00");
                 }
                 else
                 {
