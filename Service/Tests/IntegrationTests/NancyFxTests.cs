@@ -28,5 +28,21 @@ namespace IntegrationTest
             Assert.AreEqual(HttpStatusCode.OK, result.Result.StatusCode);
         }
 
+        [TestCase]
+        public void CanAccessFormatMoney()
+        {
+            // Given
+            var browser = new Browser(with => with.Module<FormatModule>());
+
+            // When
+            var result = browser.Get("/format/money/1600", with =>
+            {
+                with.HttpRequest();
+            });
+
+            // Then
+            Assert.AreEqual(HttpStatusCode.OK, result.Result.StatusCode);
+        }
+
     }
 }

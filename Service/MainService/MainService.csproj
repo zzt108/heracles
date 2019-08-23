@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NancyFX\Helper.cs" />
+    <Compile Include="NancyFX\FormatModule.cs" />
     <Compile Include="NancyFX\MainModule.cs" />
     <Compile Include="NancyFX\RequestObject.cs" />
     <Compile Include="Program.cs" />

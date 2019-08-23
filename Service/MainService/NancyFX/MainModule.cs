@@ -1,4 +1,6 @@
-﻿using Nancy;
+﻿using MainService.NancyFX;
+using Nancy;
+using System;
 
 namespace MainService
 {
@@ -9,4 +11,5 @@ namespace MainService
             Get("/", _ => "Main service");
         }
     }
+
 }
