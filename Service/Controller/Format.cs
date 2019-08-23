@@ -12,10 +12,17 @@ namespace Controller
         {
             try
             {
+                var nfi = new System.Globalization.NumberFormatInfo
+                {
+                    NumberDecimalSeparator = ".",
+                    NumberGroupSeparator = " ",
+                    NumberDecimalDigits = rounding
+                };
+
                 if (decimal.TryParse(input, out var number))
                 {
                     var rounded = Math.Round(number, rounding);
-                    return number.ToString("# ##0.00");
+                    return number.ToString("N", nfi);
                 }
                 else
                 {
