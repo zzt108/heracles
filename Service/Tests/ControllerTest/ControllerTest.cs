@@ -1,12 +1,11 @@
 ﻿using System;
-using System.IO;
 using FluentAssertions;
 
-namespace IntegrationTest
+namespace TestModel
 {
     //[TestClass]
     public class ControllerTest
     {
+
     }
-    
 }

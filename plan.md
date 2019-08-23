@@ -1,6 +1,7 @@
 #Plan/Acceptance criteria
 	1. AC: Create simple web page/REST service/backend in Dotnet C# as specified in Readme.md
 		1. AC: testable architecture
+		2. Implement rounding to 2 decimal places
 	2. AC: Create as much automated test as possible
 		1. Unit tests of the backend, data driven test, mock testing?
 		2. Integration test. Maybe a RESTful service?
