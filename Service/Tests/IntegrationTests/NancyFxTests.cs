@@ -4,14 +4,15 @@ using Nancy;
 using Nancy.Testing;
 using MainService;
 using MainService.NancyFX;
+using NUnit.Framework;
 
 namespace IntegrationTest
 {
-    //[TestClass]
+    [TestFixture]
     public class NancyFxTests
     {
 
-        //[TestMethod]
+        [TestCase]
         public void CanAccessNancy()
         {
             // Given
@@ -24,7 +25,7 @@ namespace IntegrationTest
             });
 
             // Then
-            //Assert.AreEqual(HttpStatusCode.OK, result.Result.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, result.Result.StatusCode);
         }
 
     }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using FluentAssertions;
+using NUnit.Framework;
 
 namespace IntegrationTest
 {
-    //[TestClass]
+    [TestFixture]
     public class ControllerTest
     {
     }
