@@ -2,8 +2,10 @@
 
 function UserGetAction() {
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "http://localhost:8080/tax/vilnius/2016/1/1", true);
-        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.open("GET", "http://localhost:8080/format/money/1600", true);
+        //xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.setRequestHeader("Content-type", "*/*");
+        xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
         xhttp.onload = function () {
 
         // Begin accessing JSON data here

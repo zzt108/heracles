@@ -19,7 +19,7 @@ namespace MainService
             NancyHost host;
             string url = "http://localhost:8080";
             HostConfiguration hostConfigs = new HostConfiguration {UrlReservations = {CreateAutomatically = true}};
-            host = new NancyHost(new Uri(url), new DefaultNancyBootstrapper(), hostConfigs);
+            host = new NancyHost(new Uri(url), new NancyFX.CorsBootStrapper(), hostConfigs);
             host.Start();
 
             //Debug code
