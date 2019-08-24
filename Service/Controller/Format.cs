@@ -8,30 +8,23 @@ namespace Controller
 {
     public static class Format
     {
-        public static string Money(string input, int rounding = 2)
+        public static string Money(string inputNumber, int rounding = 2)
         {
-            try
+            var nfi = new System.Globalization.NumberFormatInfo
             {
-                var nfi = new System.Globalization.NumberFormatInfo
-                {
-                    NumberDecimalSeparator = ".",
-                    NumberGroupSeparator = " ",
-                    NumberDecimalDigits = rounding
-                };
+                NumberDecimalSeparator = ".",
+                NumberGroupSeparator = " ",
+                NumberDecimalDigits = rounding
+            };
 
-                if (decimal.TryParse(input, out var number))
-                {
-                    var rounded = Math.Round(number, rounding);
-                    return number.ToString("N", nfi);
-                }
-                else
-                {
-                    throw new ArgumentException($"Cannot parse '{input}'", nameof(input));
-                }
-            }
-            catch (Exception e)
+            if (decimal.TryParse(inputNumber, out var number))
             {
-                throw new ArgumentException(e.Message, nameof(input));
+                var rounded = Math.Round(number, rounding);
+                return number.ToString("N", nfi);
+            }
+            else
+            {
+                throw new ArgumentException($"Cannot parse '{inputNumber}'", nameof(inputNumber));
             }
         }
     }

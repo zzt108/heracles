@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title>Call Taxes Service</title>
@@ -8,11 +9,17 @@
 
 <body>
     <div id="root">
-        <button type="submit" onclick="UserGetAction()">Get /format/money/1600</button>
 
+            Input number: <input type="text" name="number" id="aidNumber" value="0"><br>
+
+            <input type="submit" value="Call Service..." id="aidCallService" onclick="UserGetAction('aidNumber', 'resultContainerId')">
+            <div id="resultContainerId">
+
+            </div>
     </div>
 
     <script src="client.js"></script>
 
 </body>
+
 </html>
