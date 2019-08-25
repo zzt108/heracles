@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainService", "MainService\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerTests", "Tests\ControllerTest\ControllerTests.csproj", "{697BFC18-C273-4CDC-8E22-17D82D482601}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium", "Tests\Selenium\Selenium.csproj", "{419F0E94-07C6-46C1-B8AF-723A9428D57A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{697BFC18-C273-4CDC-8E22-17D82D482601}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{697BFC18-C273-4CDC-8E22-17D82D482601}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{697BFC18-C273-4CDC-8E22-17D82D482601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{419F0E94-07C6-46C1-B8AF-723A9428D57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419F0E94-07C6-46C1-B8AF-723A9428D57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419F0E94-07C6-46C1-B8AF-723A9428D57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419F0E94-07C6-46C1-B8AF-723A9428D57A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{593E417F-56E8-4511-BDA0-8FBC3BAF4017} = {FD7E1AE6-A339-482A-9127-E151FC88771A}
 		{697BFC18-C273-4CDC-8E22-17D82D482601} = {FD7E1AE6-A339-482A-9127-E151FC88771A}
+		{419F0E94-07C6-46C1-B8AF-723A9428D57A} = {FD7E1AE6-A339-482A-9127-E151FC88771A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F4A5B08-A021-43D8-AECD-5C469889AADE}

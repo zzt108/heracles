@@ -1,4 +1,0 @@
-[submodule "Selenium"]
-	path = Selenium
-	url = https://github.com/zzt108/Selenium.git
-	branch = master
