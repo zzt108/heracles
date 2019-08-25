@@ -63,8 +63,34 @@ namespace IntegrationTest
 
                     var errorMessages = driver.FindElements(By.Id("aidError"));
                     errorMessages.Count.Should().Be(0,"There should be NO error message");
+                    var result = driver.FindElement(By.Id("aidResult"));
+                    result.Text.Should().Be("1 600.00");
                 }
             }
         }
+
+        [Test]
+        public void CanDoHappyPath2()
+        {
+            using (var service = new ServiceHandler())
+            {
+                using (var selenium = new Selenium.Selenium(WebSiteRoot + "client.html", _browserType))
+                {
+                    var driver = selenium.Driver;
+                    driver.Navigate().GoToUrl(selenium.BaseUrl);
+                    var inputNumber = driver.FindElement(By.Id("aidNumber"));
+                    var sendButton = driver.FindElement(By.Id("aidCallService"));
+                    inputNumber.Clear();
+                    inputNumber.SendKeys("2310000.159897");
+                    sendButton.Click();
+
+                    var errorMessages = driver.FindElements(By.Id("aidError"));
+                    errorMessages.Count.Should().Be(0,"There should be NO error message");
+                    var result = driver.FindElement(By.Id("aidResult"));
+                    result.Text.Should().Be("2 310 000.16");
+                }
+            }
+        }
+
     }
 }
