@@ -37,8 +37,7 @@ function UserGetAction(numberId, resultContainerId) {
         const errorMessage = document.createElement('p');
         errorMessage.textContent = `No API Error`;
         errorMessage.setAttribute('id', 'aidError')
-        result.appendChild(errorMessage);
-        app.appendChild(result);
+        app.appendChild(errorMessage);
     }
 
     xhttp.open("GET", `http://localhost:8080/format/money/${number}`, true);
