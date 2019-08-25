@@ -61,8 +61,8 @@ namespace IntegrationTest
                     inputNumber.SendKeys("1600");
                     sendButton.Click();
 
-                    var errorMessage = driver.FindElement(By.Id("aidError"));
-                    errorMessage.Should().BeNull("There should be NO error message");
+                    var errorMessages = driver.FindElements(By.Id("aidError"));
+                    errorMessages.Count.Should().Be(0,"There should be NO error message");
                 }
             }
         }

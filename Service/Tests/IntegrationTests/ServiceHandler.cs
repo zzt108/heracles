@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using System.Threading;
 using System.Configuration;
 
@@ -31,16 +25,16 @@ namespace IntegrationTest
 
         private static string GetExecutablePath()
         {
-            var path = ConfigurationManager.AppSettings["TestedProcessPath"];
-            return Path.Combine(path,_processName);
+            return ConfigurationManager.AppSettings["TestedProcessPath"];
         }
 
         public static void Launch()
         {
             KillProcesses();
             _process = new Process();
-            var appPathExe = GetExecutablePath();
-            _process.StartInfo.FileName = Path.Combine(appPathExe, $"{_processName}.exe");
+            var appPath = GetExecutablePath();
+            Console.WriteLine(appPath);
+            _process.StartInfo.FileName = Path.Combine(appPath, _processName);
             _process.Start();
         }
 
