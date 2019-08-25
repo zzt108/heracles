@@ -16,7 +16,7 @@ namespace IntegrationTest
     public class UITests
     {
         private Selenium.Selenium.BrowserTypeEnum _browserType;
-        private static string WebSiteRoot { get; }
+        private static string WebSiteRoot { get; set; }
 
         static UITests()
 		{
@@ -31,7 +31,7 @@ namespace IntegrationTest
         [Test]
         public void CanOpenUI()
         {
-            using (var selenium = new Selenium.Selenium(WebSiteRoot, _browserType))
+            using (var selenium = new Selenium.Selenium(WebSiteRoot + "client.html", _browserType))
             {
                 selenium.Driver.Navigate().GoToUrl(selenium.BaseUrl);
             }
