@@ -46,5 +46,25 @@ namespace IntegrationTest
             }
         }
 
+        [Test]
+        public void CanDoHappyPath1()
+        {
+            using (var service = new ServiceHandler())
+            {
+                using (var selenium = new Selenium.Selenium(WebSiteRoot + "client.html", _browserType))
+                {
+                    var driver = selenium.Driver;
+                    driver.Navigate().GoToUrl(selenium.BaseUrl);
+                    var inputNumber = driver.FindElement(By.Id("aidNumber"));
+                    var sendButton = driver.FindElement(By.Id("aidCallService"));
+                    inputNumber.Clear();
+                    inputNumber.SendKeys("1600");
+                    sendButton.Click();
+
+                    var errorMessage = driver.FindElement(By.Id("aidError"));
+                    errorMessage.Should().BeNull("There should be NO error message");
+                }
+            }
+        }
     }
 }
