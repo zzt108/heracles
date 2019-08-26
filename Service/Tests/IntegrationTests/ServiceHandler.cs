@@ -7,11 +7,11 @@ using System.Configuration;
 namespace IntegrationTest
 {
 
-    public class ServiceHandler:IDisposable
+    public class ServiceHandler : IDisposable
     {
 
         private static Process _process;
-        private static readonly string _processName ;
+        private static readonly string _processName;
 
         static ServiceHandler()
         {
@@ -44,8 +44,10 @@ namespace IntegrationTest
             KillExistingProcess(_processName, killProcesses: true);
         }
 
-        public static void KillExistingProcess(string processNameWithoutExtension, bool killProcesses = true)
+        public static void KillExistingProcess(string processName, bool killProcesses = true)
         {
+            var processNameWithoutExtension = Path.GetFileNameWithoutExtension(processName);
+            //Console.WriteLine($"KillExistingProcess {processNameWithoutExtension} {killProcesses}");
             if (killProcesses)
             {
                 var pa = Process.GetProcessesByName(processNameWithoutExtension.ToLowerInvariant());
