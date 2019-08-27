@@ -5,7 +5,7 @@ The latest work is on branch ZuluTango
 
 ### Visual Studio Community Edition
 Compilation is easiest to do in Microsoft Visual Studio 2019 Community Edition.
-Open the solution file **Service.sln** from **Service folder** in Visual Studio.
+Open the solution file **Service.sln** from **Heracles/Service** folder in Visual Studio.
 Then in the **Build Menu** select **Build Solution**
 
 The binaries should be compiled without problem, however Visual Studio 2019 sometimes have issues accessing some of the external libraries (nuget packages). In this case the build process would fail. 
@@ -22,9 +22,9 @@ Press the button **Run All** above the tree view.
 All tests should be green after execution.
 
 ## <a id="testRunnerId">In NUnit Test runner</a>
-Execute **runTests.bat** file in **Service** folder
-1. Please see [NUnit test runner installation](https://stackoverflow.com/questions/45482507/how-do-i-install-nunit-3-console-on-windows-and-run-tests)
-2. If Visual Studio compilation is succesfull, test runner is also deployed into packages folder, so runtests.bat is expecting it to be there.
+Execute **runTests.bat** file in **Heracles/Service** folder
+1. Please see [NUnit test runner installation](https://stackoverflow.com/questions/45482507/how-do-i-install-nunit-3-console-on-windows-and-run-tests) if compilation was not successfull
+2. If Visual Studio compilation is succesfull, test runner is also deployed into **Heracles/Service/Packages/NUnitConsoleRunner<version>** folder, so runtests.bat is supposed to be able to run and expecting it to be there.
 3. If test runner is installed manually, runtests.bat needs to be changed to search for it at the correct place
 # <a id="setupTestsId">How to setup automated test</a>
 ## UI test setup
