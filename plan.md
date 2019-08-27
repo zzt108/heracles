@@ -1,4 +1,4 @@
-#Plan/Acceptance criteria
+# Plan/Acceptance criteria
 1. AC: Create simple web page/REST service/backend in Dotnet C# as specified in Readme.md
 	1. AC: testable architecture
 	2. Implement rounding to 2 decimal places
