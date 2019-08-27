@@ -1,34 +1,36 @@
-# How to setup environment
-## How to compile sources
+# 1. How to setup environment
+## 1.1. How to compile sources
 Sources can be found on Github at https://github.com/zzt108/heracles/tree/ZuluTango
 The latest work is on branch ZuluTango
 
-### Visual Studio Community Edition
+### 1.1.1. Visual Studio Community Edition
 Compilation is easiest to do in Microsoft Visual Studio 2019 Community Edition.
 Open the solution file **Service.sln** from **Heracles/Service** folder in Visual Studio.
-Then in the **Build Menu** select **Build Solution**
+To compile select **Build Solution** in the **Build Menu** .
 
 The binaries should be compiled without problem, however Visual Studio 2019 sometimes have issues accessing some of the external libraries (nuget packages). In this case the build process would fail. 
 
-In this case I can provide the compiled binaries and the tests could be executed by NUnit test executor. [See below](#testRunnerId).
+If build is unsuccessfull
+1. In **Tools/Nuget Package Manager/Manage Nuget Packages for Solution ...** menu the missing packages can be forced to be downloaded by selecting a previous version to be installed for thrm. Then upgrading them again to the latest version.
+2. Alternatively I can provide the compiled binaries and the tests could be executed by NUnit test executor. [See below](#testRunnerId).
 
-## How to execute tests
+## 1.2. How to execute tests
 Before executing the tests, please do configure the tests as described [below](#setupTestId)
 
-## In Visual Studio
+## 1.2.1. In Visual Studio
 Open Test Explorer window in menu Test/Windows/Test Explorer
 The available tests should be seen in the left side of the window in a collapsed tree view.
 Press the button **Run All** above the tree view.
 All tests should be green after execution.
 
-## <a id="testRunnerId">In NUnit Test runner</a>
+## <a id="testRunnerId">1.2.2. In NUnit Test runner</a>
 Execute **runTests.bat** file in **Heracles/Service** folder
 1. Please see [NUnit test runner installation](https://stackoverflow.com/questions/45482507/how-do-i-install-nunit-3-console-on-windows-and-run-tests) if compilation was not successfull
-2. If Visual Studio compilation is succesfull, test runner is also deployed into **Heracles/Service/Packages/NUnitConsoleRunner<version>** folder, so runtests.bat is supposed to be able to run and expecting it to be there.
+2. If Visual Studio compilation is succesfull, test runner is also deployed into **Heracles/Service/Packages/NUnitConsoleRunner{version}** folder, so runtests.bat is supposed to be able to run and expecting it to be there.
 3. If test runner is installed manually, runtests.bat needs to be changed to search for it at the correct place
-# <a id="setupTestsId">How to setup automated test</a>
-## UI test setup
-### Selenium
+# <a id="setupTestsId">2. How to setup automated test</a>
+## 2.1. UI test setup
+### 2.1.1. Selenium
 1. <a id="driversId">Get and put Selenium browser drivers from WEB</a>
 They can be found at 
 [GitHub](https://github.com/lmc-eu/steward/wiki/Selenium-server-&-browser-drivers)
@@ -36,7 +38,7 @@ and
 [SeleniumHQ](https://www.seleniumhq.org/download/)
 
 2. Put the drivers onto search path, or in the same folder as the executable
-### Client page folder
+### 2.1.2. Client page folder
 1. Set the client page path in the test app configuration file [See Example](#exampleId)
 
 2. Set the MainService.exe path (and optionally the name) in the test app configuration file [See Example](#exampleId): 
