@@ -42,10 +42,10 @@ and
 
 3. Select which browsers should be used for UI testing in the app configuration file. [See Example](#exampleId)
 
-### 2.1.2. Client page folder
-1. Set the client page path in the test app configuration file. [See Example](#exampleId)
+### 2.1.2. Integration tests setup
+1. Set the client page path (**WebSiteRoot**) in the test app configuration file. [See Example](#exampleId)
 
-2. Set the MainService.exe path (and optionally the name) in the test app configuration file [See Example](#exampleId): 
+2. Set the MainService.exe path (and optionally the name) in the test app configuration file. (**TestedProcess** and **TestedProcessPath**) [See Example](#exampleId): 
 
 3. Setup the enabled browsers. If multiple browsers enabled then the tests are executed on each of them. Remember to download and deploy the browser drivers [See](#driversId)
 4. <a id="exampleId">Example configuration</a>
