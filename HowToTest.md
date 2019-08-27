@@ -11,11 +11,11 @@ To compile select **Build Solution** in the **Build Menu** .
 The binaries should be compiled without problem, however Visual Studio 2019 sometimes have issues accessing some of the external libraries (nuget packages). In this case the build process would fail. 
 
 If build is unsuccessfull
-1. In **Tools/Nuget Package Manager/Manage Nuget Packages for Solution ...** menu the missing packages can be forced to be downloaded by selecting a previous version to be installed for thrm. Then upgrading them again to the latest version.
-2. Alternatively I can provide the compiled binaries and the tests could be executed by NUnit test executor. [See below](#testRunnerId).
+1. In **Tools/Nuget Package Manager/Manage Nuget Packages for Solution ...** menu the missing packages can be forced to be downloaded by selecting a previous version to be installed for them. Then upgrading the packages again to the latest version will download them correctly.
+2. Alternatively I can provide the compiled binaries and the tests could be executed by NUnit test executor. [See below](#122-In-NUnit-Test-runner).
 
 ## 1.2. How to execute tests
-Before executing the tests, please do configure the tests as described [below](#setupTestId)
+Before executing the tests, please do configure the tests as described [below](#2-how-to-setup-automated-test)
 
 ## 1.2.1. In Visual Studio
 Open Test Explorer window in menu Test/Windows/Test Explorer
@@ -23,12 +23,13 @@ The available tests should be seen in the left side of the window in a collapsed
 Press the button **Run All** above the tree view.
 All tests should be green after execution.
 
-## <a id="testRunnerId">1.2.2. In NUnit Test runner</a>
+## 1.2.2. In NUnit Test runner
 Execute **runTests.bat** file in **Heracles/Service** folder
 1. Please see [NUnit test runner installation](https://stackoverflow.com/questions/45482507/how-do-i-install-nunit-3-console-on-windows-and-run-tests) if compilation was not successfull
 2. If Visual Studio compilation is succesfull, test runner is also deployed into **Heracles/Service/Packages/NUnitConsoleRunner{version}** folder, so runtests.bat is supposed to be able to run and expecting it to be there.
 3. If test runner is installed manually, runtests.bat needs to be changed to search for it at the correct place
-# <a id="setupTestsId">2. How to setup automated test</a>
+
+# 2. How to setup automated test
 ## 2.1. UI test setup
 ### 2.1.1. Selenium
 1. <a id="driversId">Get and put Selenium browser drivers from WEB</a>
