@@ -33,5 +33,18 @@ namespace TestModel
             Format.Money(actual).Should().Be(expected);
             
         }
+
+        [TestCase]
+        public void CanHandleInvalidInput()
+        {
+            var actual = "abcd";
+            var expectedMessage = "Cannot parse 'abcd'\r\nParameter name: inputNumber";
+
+            Action act = () => { Format.Money(actual); };
+            act.Should().Throw<ArgumentException>().WithMessage(expectedMessage);
+            
+        }
+
+
     }
 }
