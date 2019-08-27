@@ -49,9 +49,13 @@ and
 
 3. Setup the enabled browsers. If multiple browsers enabled then the tests are executed on each of them. Remember to download and deploy the browser drivers [See](#driversId)
 4. <a id="exampleId">Example configuration</a>
-4.1. How to edit the configuration file
-4.1.1. In visual Studio before compilation the file can be found in the IntegrationTests project in the solution browser as app.config. This file is copied during compilation to the bin/debug folder.
-4.1.2. In any text editor please find the IntegrationTests.config file in the bin/debug folder. There your changes will affect the automated tests. 
+
+  1. How to edit the configuration file
+
+    1. In visual Studio before compilation the file can be found in the IntegrationTests project in the solution browser as app.config. This file is copied during compilation to the bin/debug folder.
+
+    2. In any text editor please find the IntegrationTests.config file in the bin/debug folder. There your changes will affect the automated tests. 
+
 ```xml
   <appSettings>
       <add key="TestedProcess" value="mainservice.exe" />
